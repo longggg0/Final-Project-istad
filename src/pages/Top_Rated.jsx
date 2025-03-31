@@ -1,6 +1,7 @@
 export default function TopRated() {
     return (
-      <a href="#" className="block">
+      <div className="grid grid-cols-6 gap-4 p-4">
+        <a href="#" className="block">
         <img
           alt=""
           src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
@@ -16,6 +17,7 @@ export default function TopRated() {
           reiciendis sequi ipsam incidunt.
         </p>
       </a>
+      </div>
     );
   }
   
