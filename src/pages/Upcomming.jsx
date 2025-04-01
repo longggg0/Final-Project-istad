@@ -24,13 +24,13 @@ export default function Upcomming({ backdrop_path, original_title, overview }) {
                                     loading="lazy"
                                     alt={upcomming.original_title} className="w-full rounded-lg" />
                                 <div className="mt-3 space-y-2">
-                                    <span className="block text-indigo-600 text-sm">
+                                    <span className="block text-white text-sm">
                                         {upcomming.release_date}
                                     </span>
-                                    <h3 className="text-lg text-gray-800 duration-150 group-hover:text-indigo-600 font-semibold">
+                                    <h3 className="text-lg text-blue-500 duration-150 font-semibold">
                                         {upcomming.original_title}
                                     </h3>
-                                    <p className="text-gray-600 text-sm duration-150 group-hover:text-gray-800">
+                                    <p className="text-white text-sm duration-150">
                                         {upcomming.overview}
                                     </p>
                                 </div>

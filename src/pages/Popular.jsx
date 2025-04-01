@@ -23,13 +23,13 @@ export default function Popular({backdrop_path,original_title,release_date}) {
                                     loading="lazy"
                                     alt={popular.original_title} className="w-full rounded-lg" />
                                 <div className="mt-3 space-y-2">
-                                    <span className="block text-indigo-600 text-sm">
+                                    <span className="block text-white text-sm">
                                         {popular.release_date}
                                     </span>
-                                    <h3 className="text-lg text-gray-800 duration-150 group-hover:text-indigo-600 font-semibold">
+                                    <h3 className="text-lg text-blue-500 duration-150 ">
                                         {popular.original_title}
                                     </h3>
-                                    <p className="text-gray-600 text-sm duration-150 group-hover:text-gray-800">
+                                    <p className="text-white text-sm duration-150">
                                         {popular.overview}
                                     </p>
                                 </div>

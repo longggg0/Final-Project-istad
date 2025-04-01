@@ -47,8 +47,10 @@ export default function LogIn() {
     return (
         <main className="w-full h-screen flex flex-col items-center justify-center px-4">
             <div className="max-w-sm w-full text-gray-600 space-y-5">
-                <div className="text-center pb-8">
-                    <h2 className="rounded-lg bg-blue-800 px-4 py-2 text-white text-3xl font-bold sm:text-3xl">ISTAD Movie</h2>
+                <div className=" text-center justify-center pb-8">
+                    <div className="ml-36"> 
+                    <img src="https://cdn.pixabay.com/photo/2022/09/18/07/41/logo-7462411_1280.png" alt="" width={70} />
+                    </div>
                     <div className="mt-5">
                         <h3 className="text-gray-800 text-xl font-medium sm:text-xl">Log in to your account</h3>
                     </div>
@@ -113,6 +115,7 @@ export default function LogIn() {
                     </svg>
                     Continue with Google
                 </button>
+
             </div>
         </main>
     )

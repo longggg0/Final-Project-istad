@@ -36,13 +36,13 @@ export default function Home() {
                                     loading="lazy"
                                     alt={movie.original_title} className="w-full rounded-lg" />
                                 <div className="mt-3 space-y-2">
-                                    <span className="block text-indigo-600 text-sm">
+                                    <span className="block text-white-600 text-sm">
                                         {movie.release_date}
                                     </span>
-                                    <h3 className="text-lg text-gray-800 duration-150 group-hover:text-indigo-600 font-semibold">
+                                    <h3 className="text-lg text-blue-600 duration-150 font-semibold">
                                         {movie.original_title}
                                     </h3>
-                                    <p className="text-gray-600 text-sm duration-150 group-hover:text-gray-800">
+                                    <p className="text-white text-sm duration-150">
                                         {movie.overview}
                                     </p>
                                 </div>
