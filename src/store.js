@@ -4,6 +4,9 @@ import movieReducer from './features/movie/movieSlice'
 import authReducer from './features/auth/authSlice'
 import peopleReducer from './features/people/peopleSlice'
 import upcommingReducer from './features/upcomming/upcommingSlice'
+import popularReducer from './features/popular/popularSlice'
+import nowplayingReducer from './features/nowplaying/nowplayingSlice'
+import topratedReducer from './features/toprated/topratedSlice'
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +14,9 @@ export const store = configureStore({
     movie: movieReducer,
     auth: authReducer,
     people: peopleReducer,
-    upcomming: upcommingReducer
+    upcomming: upcommingReducer,
+    popular: popularReducer,
+    nowplaying: nowplayingReducer,
+    toprated: topratedReducer
   },
 })

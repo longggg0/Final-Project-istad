@@ -9,27 +9,36 @@ export default function Upcomming({ backdrop_path, original_title, overview }) {
   const { data } = useSelector((state) => state.upcomming);
 
   useEffect(()=> {
-    console.log('ok')
+    
     dispatch(fetchUpcomming())
   },[])
 
   return (
-    <div className="grid grid-cols-6 gap-4 p-4">
-      {data.results && data.results.map((upcomming, index) => (
-          <a href="#" className="block">
-            <img
-              alt=""
-              src={`https://media.themoviedb.org/t/p/w300_and_h450_bestv2${upcomming.backdrop_path}`}
-              className="h-64 w-full object-cover sm:h-80 lg:h-96"
-            />
-
-            <h3 className="mt-4 text-lg font-bold text-gray-900 sm:text-xl">
-              {upcomming.original_title}
-            </h3>
-
-            <p className="mt-2 max-w-sm text-gray-700">{upcomming.overview}</p>
-          </a>
-        ))}
-    </div>
+    <main>
+            <ul className="px-4 grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-5">
+                {
+                    data.results && data.results.map((upcomming) => (
+                        <li className="w-full mx-auto group sm:max-w-sm">
+                            
+                                <img src={`https://image.tmdb.org/t/p/w500${upcomming.backdrop_path}`}
+                                    loading="lazy"
+                                    alt={upcomming.original_title} className="w-full rounded-lg" />
+                                <div className="mt-3 space-y-2">
+                                    <span className="block text-indigo-600 text-sm">
+                                        {upcomming.release_date}
+                                    </span>
+                                    <h3 className="text-lg text-gray-800 duration-150 group-hover:text-indigo-600 font-semibold">
+                                        {upcomming.original_title}
+                                    </h3>
+                                    <p className="text-gray-600 text-sm duration-150 group-hover:text-gray-800">
+                                        {upcomming.overview}
+                                    </p>
+                                </div>
+                            
+                        </li>
+                    ))
+                }
+            </ul>
+        </main>
   );
 }

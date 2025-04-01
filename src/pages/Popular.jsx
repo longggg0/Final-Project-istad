@@ -1,23 +1,44 @@
-export default function Popular() {
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPopular } from "../features/popular/popularAction";
+import { useEffect } from "react";
+
+export default function Popular({backdrop_path,original_title,release_date}) {
+  const dispatch = useDispatch()
+  
+  const { data } = useSelector((state) => state.popular);
+
+  useEffect(()=> {
+    
+    dispatch(fetchPopular())
+  },[])
+
     return (
-      <div className="grid grid-cols-6 gap-4 p-4">
-        <a href="#" className="block">
-        <img
-          alt=""
-          src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-          className="h-64 w-full object-cover sm:h-80 lg:h-96"
-        />
-  
-        <h3 className="mt-4 text-lg font-bold text-gray-900 sm:text-xl">
-          Lorem, ipsum dolor.
-        </h3>
-  
-        <p className="mt-2 max-w-sm text-gray-700">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
-          reiciendis sequi ipsam incidunt.
-        </p>
-      </a>
-      </div>
+      <main>
+            <ul className="px-4 grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-5">
+                {
+                    data.results && data.results.map((popular) => (
+                        <li className="w-full mx-auto group sm:max-w-sm">
+                            
+                                <img src={`https://image.tmdb.org/t/p/w500${popular.backdrop_path}`}
+                                    loading="lazy"
+                                    alt={popular.original_title} className="w-full rounded-lg" />
+                                <div className="mt-3 space-y-2">
+                                    <span className="block text-indigo-600 text-sm">
+                                        {popular.release_date}
+                                    </span>
+                                    <h3 className="text-lg text-gray-800 duration-150 group-hover:text-indigo-600 font-semibold">
+                                        {popular.original_title}
+                                    </h3>
+                                    <p className="text-gray-600 text-sm duration-150 group-hover:text-gray-800">
+                                        {popular.overview}
+                                    </p>
+                                </div>
+                            
+                        </li>
+                    ))
+                }
+            </ul>
+        </main>
     );
   }
   

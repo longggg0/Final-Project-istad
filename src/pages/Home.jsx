@@ -27,10 +27,6 @@ export default function Home() {
 
     return (
         <main>
-            {/* <div className="px-4 py-2 grid grid-cols-2 gap-2">
-                <ButtonIcon onClick={onIncreasement} icon={<FaPlus />} />
-                <ButtonIcon onClick={onDecreasement} icon={<FaMinus />} />
-            </div> */}
             <ul className="px-4 grid gap-4 mt-4 sm:grid-cols-2 lg:grid-cols-5">
                 {
                     data.results && data.results.map((movie) => (

@@ -151,9 +151,9 @@ export default function AppNavbar() {
             {submenuNav.map((item, idx) => {
               return (
                 <li key={idx} className={`py-1 ${window.location.pathname === item.path ? "border-b-2 border-indigo-600" : ""}`}>
-                  <a href={item.path} className="block py-2 px-3 rounded-lg text-gray-700 hover:text-gray-900 hover:bg-gray-100 duration-150">
+                  <Link to={item.path} className="block py-2 px-3 rounded-lg text-gray-700 hover:text-gray-900 hover:bg-gray-100 duration-150">
                     {item.title}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
