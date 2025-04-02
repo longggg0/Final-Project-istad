@@ -26,7 +26,7 @@ export default function Popular({backdrop_path,original_title,release_date}) {
                                     <span className="block text-white text-sm">
                                         {toprated.release_date}
                                     </span>
-                                    <h3 className="text-lg text-blue-500 duration-150  font-semibold">
+                                    <h3 className="text-lg text-blue-500 duration-150  font-extrabold tracking-tight leading-tight ">
                                         {toprated.original_title}
                                     </h3>
                                     <p className="text-white text-sm duration-150 ">

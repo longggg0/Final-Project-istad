@@ -39,7 +39,7 @@ export default function Home() {
                                     <span className="block text-white-600 text-sm">
                                         {movie.release_date}
                                     </span>
-                                    <h3 className="text-lg text-blue-600 duration-150 font-semibold">
+                                    <h3 className="text-lg text-blue-600 duration-150 font-extrabold tracking-tight leading-tight ">
                                         {movie.original_title}
                                     </h3>
                                     <p className="text-white text-sm duration-150">

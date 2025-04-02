@@ -27,7 +27,7 @@ export default function Upcomming({ backdrop_path, original_title, overview }) {
                                     <span className="block text-white text-sm">
                                         {upcomming.release_date}
                                     </span>
-                                    <h3 className="text-lg text-blue-500 duration-150 font-semibold">
+                                    <h3 className="text-lg text-blue-500 duration-150 font-extrabold tracking-tight leading-tight ">
                                         {upcomming.original_title}
                                     </h3>
                                     <p className="text-white text-sm duration-150">

@@ -86,7 +86,7 @@ export default function AppNavbar() {
   ];
 
   return (
-    <header className="text-base lg:text-sm">
+    <header className="text-base font-bold   lg:text-sm">
       <div
         className={`bg-black text-white items-center gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static ${
           state ? "h-full fixed inset-x-0" : ""

@@ -46,13 +46,13 @@ export default function LogIn() {
 
     return (
         <main className="w-full h-screen flex flex-col items-center justify-center px-4">
-            <div className="max-w-sm w-full text-gray-600 space-y-5">
+            <div className="max-w-sm w-full text-white space-y-5">
                 <div className=" text-center justify-center pb-8">
                     <div className="ml-36"> 
-                    <img src="https://cdn.pixabay.com/photo/2022/09/18/07/41/logo-7462411_1280.png" alt="" width={70} />
+                    <img src="https://cdn.pixabay.com/photo/2022/09/18/07/41/logo-7462411_1280.png" alt="" width={90} />
                     </div>
                     <div className="mt-5">
-                        <h3 className="text-gray-800 text-xl font-medium sm:text-xl">Log in to your account</h3>
+                        <h3 className="text-white text-xl font-medium sm:text-xl">Log in to your account</h3>
                     </div>
                 </div>
                 <form
@@ -69,7 +69,7 @@ export default function LogIn() {
                             id="email"
                             name="email"
                             type="email"
-                            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                            className="w-full mt-2 px-3 py-2 text-white bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                         />
                         {formik.touched.email && formik.errors.email ? (
                             <div className="text-red-500">{formik.errors.email}</div>
@@ -85,7 +85,7 @@ export default function LogIn() {
                             id="password"
                             name="password"
                             type="password"
-                            className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                            className="w-full mt-2 px-3 py-2 text-white bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                         />
                         {formik.touched.password && formik.errors.password ? (
                             <div className="text-red-500">{formik.errors.password}</div>
