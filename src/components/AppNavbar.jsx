@@ -140,7 +140,7 @@ export default function AppNavbar() {
                 state ? "" : "hidden"
               }`}
             >
-              <ul className="items-center space-y-6 lg:flex lg:space-x-6 lg:space-y-0">
+              <ul className="items-center space-y-6 lg:flex lg:space-x-6 lg:space-y-0 mr-10">
                 {navigation.map((item, idx) => {
                   return (
                     <li key={idx}>
@@ -154,7 +154,7 @@ export default function AppNavbar() {
                   <AvatarMenue avatar={profile && profile.avatar} />
                 ) : (
                   <div className="absolute top-10 right-4 mt-3 mr-80 lg:mt-0">
-                    <Link to="/login" className="block text-white">
+                    <Link to="/login" className="block text-white mr-5">
                       Log in
                     </Link>
                   </div>
